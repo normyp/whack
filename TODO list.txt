@@ -1,0 +1,11 @@
+Done:
+- Spawns
+- Spawn times
+- Whacking
+- Scoring
+
+TO DO:
+- Game over = lives 
+- Leaderboard
+- Art
+- Animations
