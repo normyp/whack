@@ -3,9 +3,12 @@ Done:
 - Spawn times
 - Whacking
 - Scoring
+- Lives
+- Game over screen
 
 TO DO:
-- Game over = lives 
+- Game over
 - Leaderboard
 - Art
 - Animations
+- Touch screen controls
