@@ -5,6 +5,7 @@ Done:
 - Scoring
 - Lives
 - Game over screen
+- Game restarts after death
 
 TO DO:
 - Game over
