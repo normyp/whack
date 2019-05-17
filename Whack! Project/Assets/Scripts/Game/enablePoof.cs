@@ -4,36 +4,29 @@ using UnityEngine;
 
 public class enablePoof : MonoBehaviour
 {
-    public bool hit = false;
-    // Start is called before the first frame update
-    void Awake()
+    public GameObject poof;
+
+    public GameObject moleMan;
+
+    private Animation anim;
+
+    private bool whacked;
+
+    void Start()
     {
-        // gameObject.SetActive(false);
+        anim = poof.GetComponent<Animation>();
     }
 
-    void OnMouseDown()
-    {
-        hit = true;
-        if(hit = true)
-        {
-            //Play animation once then setactive to false
-        }
-        //gameObject.Color.a = 0.0f;
-    }
-
-    void OnMouseUp()
-    {
-        hit = false;
-    }
+    // Start is called before the first frame updat
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.SetActive(true);
-        /* if hit occurs
-         *setactive to true
-         * play animation
-         * then set active to false
-         */
+        if(whacked)
+        {
+            poof.SetActive(true);
+            anim.Play("Poof"); //play animation once
+            poof.SetActive(false); 
+        }
     }
 }

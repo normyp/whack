@@ -1,0 +1,4 @@
+if hit is true then 
+make object active
+play animation once
+then de-activate the object

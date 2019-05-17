@@ -57,9 +57,9 @@ public class spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
             other = moles[selectedMole];
-            if(other.GetComponent<Hit>().whacked == true) 
+            if(other.GetComponent<hit>().whacked == true) 
             {
-                other.GetComponent<Hit>().whacked  = false;
+                other.GetComponent<hit>().whacked  = false;
                 //Now spawn new mole
                 selectedMole = Random.Range(0, 9);
 

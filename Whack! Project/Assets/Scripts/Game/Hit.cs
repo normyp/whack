@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Hit : MonoBehaviour {
+public class hit : MonoBehaviour {
 
     public GameObject moleMan;
     public bool whacked;
+
+    public GameObject poof;
 
     void OnMouseDown()
     {
@@ -16,6 +18,7 @@ public class Hit : MonoBehaviour {
         gameObject.SetActive(false);
         spawn.score++; 
         whacked = true;
+        poof.whacked = true;
 
         //Need to override default spawn system and just make a new mole
        
