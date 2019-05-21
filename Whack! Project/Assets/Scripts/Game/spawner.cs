@@ -7,7 +7,9 @@ public class spawner : MonoBehaviour {
 
     public List<GameObject> moles = new List<GameObject>();
 
-	public GameObject gameMan;
+    public List<GameObject> poofs = new List<GameObject>();
+
+    public GameObject gameMan;
 
     public GameObject poofSprite;
 
@@ -16,6 +18,8 @@ public class spawner : MonoBehaviour {
     public float timer = 0.0f;
 
     public int selectedMole;
+
+    public int x, y;
 
     public int score;
 
@@ -27,11 +31,17 @@ public class spawner : MonoBehaviour {
 
     void Start()
     {
-        for(int i = 0; i <= 8; i++)
+        for(int x = 0; x <= 8; x++)
         {
             //Adds all the spawns to the list
             moles.Add(GameObject.FindGameObjectWithTag("mole"));
-            moles[i].SetActive(false);
+            moles[x].SetActive(false);
+        }
+
+        for(int y = 0; y <= 8; y++) //sP stands for selectedPoof
+        {
+            poofs.Add(GameObject.FindGameObjectWithTag("poof"));
+            //poofs[y].SetActive(false);
         }
 
         if (!spawned) //Whilst nothing has been spawned
@@ -40,6 +50,7 @@ public class spawner : MonoBehaviour {
                 selectedMole = Random.Range(0, 9);
                 //Debug.Log("Selected mole is " + selectedMole); 
                 moles[selectedMole].SetActive(true);
+                //poofs[selectedMole].SetActive(true);
                 spawned = true;
                 onetime = false;
             }

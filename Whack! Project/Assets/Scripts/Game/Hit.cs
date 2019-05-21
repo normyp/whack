@@ -18,7 +18,6 @@ public class hit : MonoBehaviour {
         gameObject.SetActive(false);
         spawn.score++; 
         whacked = true;
-        poof.whacked = true;
 
         //Need to override default spawn system and just make a new mole
        
