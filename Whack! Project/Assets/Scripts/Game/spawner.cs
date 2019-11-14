@@ -27,10 +27,12 @@ public class spawner : MonoBehaviour {
 
     bool onetime = false;  
 
-    GameObject other; 
+    GameObject other;
+
+    public bool poofAnim;
 
     void Start()
-    {
+    {        
         for(int x = 0; x <= 8; x++)
         {
             //Adds all the spawns to the list
@@ -68,8 +70,10 @@ public class spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
             other = moles[selectedMole];
-            if(other.GetComponent<hit>().whacked == true) 
+            poofAnim = moles[selectedMole].GetComponent<enablePoof>().poofAnim;
+        if (other.GetComponent<hit>().whacked == true && poofAnim == true) 
             {
+                poofAnim = false;
                 other.GetComponent<hit>().whacked  = false;
                 //Now spawn new mole
                 selectedMole = Random.Range(0, 9);
