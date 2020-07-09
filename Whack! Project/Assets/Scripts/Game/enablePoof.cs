@@ -16,12 +16,10 @@ public class enablePoof : MonoBehaviour
 
     void Start()
     {
-        poof = GameObject.FindGameObjectWithTag("poof");
-        mole = GameObject.FindGameObjectWithTag("mole");
         anim = poof.GetComponent<Animation>();
         whacked = mole.GetComponent<hit>().whacked;
+        Debug.Log(whacked);
         poof.SetActive(false);
-        poofAnim = false;
     }
 
     // Start is called before the first frame updat
@@ -35,8 +33,6 @@ public class enablePoof : MonoBehaviour
             Debug.Log(whacked);
             poof.SetActive(true);
             anim.Play("Poof"); //play animation once
-            poof.SetActive(false);
-            poofAnim = true;
         }
     }
 }

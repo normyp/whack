@@ -6,8 +6,6 @@ public class hit : MonoBehaviour {
     public GameObject moleMan;
     public bool whacked;
 
-    public GameObject poof;
-
     void OnMouseDown()
     {
         GameObject moleMan = GameObject.FindWithTag("man"); //Creates an instance of mole manager so that the component spawner can be used

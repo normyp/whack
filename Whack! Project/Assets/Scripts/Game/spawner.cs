@@ -29,8 +29,6 @@ public class spawner : MonoBehaviour {
 
     GameObject other;
 
-    public bool poofAnim;
-
     void Start()
     {        
         for(int x = 0; x <= 8; x++)
@@ -71,9 +69,8 @@ public class spawner : MonoBehaviour {
 	void Update () {
             other = moles[selectedMole];
             //poofAnim = moles[selectedMole].GetComponent<enablePoof>().poofAnim;
-        if (other.GetComponent<hit>().whacked == true && poofAnim == true) 
+        if (other.GetComponent<hit>().whacked == true) 
             {
-                poofAnim = false;
                 other.GetComponent<hit>().whacked  = false;
                 //Now spawn new mole
                 selectedMole = Random.Range(0, 9);
