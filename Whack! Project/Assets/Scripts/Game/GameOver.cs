@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameOver : MonoBehaviour {
 
 	GameObject gameMan;
-	public GameObject deathScreen;
+	//public GameObject deathScreen;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour {
 
        	if(life == 0)
        	{
-       		deathScreen.SetActive(true);
+       		//deathScreen.SetActive(true);
        	}
 	}
 }

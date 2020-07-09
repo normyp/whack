@@ -70,7 +70,7 @@ public class spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
             other = moles[selectedMole];
-            poofAnim = moles[selectedMole].GetComponent<enablePoof>().poofAnim;
+            //poofAnim = moles[selectedMole].GetComponent<enablePoof>().poofAnim;
         if (other.GetComponent<hit>().whacked == true && poofAnim == true) 
             {
                 poofAnim = false;
@@ -81,7 +81,7 @@ public class spawner : MonoBehaviour {
                 moles[selectedMole].SetActive(true);
             }
             //Mole missed
-	        /*else if (timer >= 2.0f)
+	        else if (timer >= 2.0f)
 	        {
                 moles[selectedMole].SetActive(false);
 
@@ -101,7 +101,7 @@ public class spawner : MonoBehaviour {
 	        		timer = 0.0f;
 	        		spawned = false;
 	        	}
-	        }*/
+	        }
 	        timer += Time.deltaTime;
 	        //Debug.Log("Timer is at: " +  timer);
 
